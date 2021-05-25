@@ -1,1 +1,1 @@
-Browser based etch-a-sketch. Based off of plain js and css.
+Browser based etch-a-sketch. Plain js and css.

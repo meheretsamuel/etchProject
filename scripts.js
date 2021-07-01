@@ -10,7 +10,8 @@ let gridcount = 70;
 const resBtn = document.querySelector('#resBtn');
 resBtn.addEventListener('click', () => {
     lebox.innerHTML = '';
-    gridcount = gridInp.value;
+    //to make sure it doesn't grow too big
+    if (gridInp.value < 70) gridcount = gridInp.value;
     sty.innerHTML = `
     #thebox {
         grid-template-columns: repeat(${gridcount}, 0.5fr);

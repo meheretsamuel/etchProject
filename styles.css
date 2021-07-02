@@ -8,7 +8,7 @@ body {
     display: grid;
     grid-template-columns: repeat(70, 0.5fr);
     grid-template-rows: repeat(70, 0.5fr);
-    /* margin: 1em; */
+    margin: 1em;
     border: 2px solid red;
     width: 50%;
     height: 90%;
@@ -23,9 +23,13 @@ body {
     background-color: rgb(136, 127, 255);
 } */
 
+#inputs {
+    display: flex;
+    flex-direction: row;
+}
 
-#resBtn {
-    background-color:blanchedalmond; /* Green */
+/* #resBtn {
+    background-color:blanchedalmond;
     border: none;
     color: black;
     padding: 15px 32px;
@@ -41,4 +45,9 @@ body {
 
 #resBtn:active {
     border: 0.5px solid blue;
+} */
+
+#colorInputs {
+    margin-left: 1em;
+    text-align: center;
 }

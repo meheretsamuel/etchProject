@@ -30,9 +30,10 @@ let colorR = 'aquamarine';
 let colorN = 0;
 let sunset = ['#01084f', '#391954', '#631e50', '#a73c5a', '#ff7954'];
 let death = ['#040036', '#e636e1', '#fff442', '#4cd9ea', '#4ffd3c'];
+let rossette = ['#d8a7b1', '#b6e2d3', '#fae8e0', '#ef7c8e']
 //let dawn
 
-let ette = death;
+let ette = rossette;
 //pick one
 
 console.log(ette[1]);
@@ -43,7 +44,8 @@ function colorchange(ette) {
         colorR = ette[colorN];
         console.log(colorR);
         colorN += 1;
-        if (colorN == 5) colorN =0;
+        //color pallette length is more flexible now
+        if (colorN == ette.length) colorN =0;
         colorchange(ette);
 }, 300);
 }

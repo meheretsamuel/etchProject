@@ -21,10 +21,40 @@ resBtn.addEventListener('click', () => {
     generateGrid();
 })
 
+let clrID = 1;
 
 
+//User ability to specify colors
+const cInpBtn = document.querySelector('#colorBTN');
+const cInp = document.querySelector('#colorIN');
 
+cInpBtn.addEventListener('click', () => {
+    clrID = cInp.value;
+    console.log(clrID);
+    console.log(ette);
+
+    switch (+clrID) {
+        case 1:
+            ette = rossette;
+            break;
+        case 2:
+            ette = sunset;
+            break;
+        case 3:
+            ette = death;
+            break;
+        default:
+            ette = rossette;
+            colorchange(ette);
+            break;
+    }
+
+    
+})
+
+//default color
 let colorR = 'aquamarine';
+
 //The color update
 
 //there are color sets
@@ -34,24 +64,24 @@ let death = ['#040036', '#e636e1', '#fff442', '#4cd9ea', '#4ffd3c'];
 let rossette = ['#d8a7b1', '#b6e2d3', '#fae8e0', '#ef7c8e']
 //let dawn
 
-let ette = rossette;
-//pick one
+let ette = sunset;
 
-console.log(ette[1]);
-
-function colorchange(ette) {
+function colorchange() {
     setTimeout(() => {
-        console.log("Switching from " + colorR + "to ");
+        console.log(`The ${ette} instance is running`)
+        //console.log("Switching from " + colorR + "to ");
         colorR = ette[colorN];
-        console.log(colorR);
+        //console.log(colorR);
         colorN += 1;
         //color pallette length is more flexible now
-        if (colorN == ette.length) colorN =0;
+        if (colorN == ette.length) colorN = 0;
         colorchange(ette);
-}, 300);
+    }, 300);
 }
 
-colorchange(ette);
+colorchange();
+
+
 
 
 //colors change over time
